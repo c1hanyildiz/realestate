@@ -186,4 +186,6 @@ const AIToolsPage = () => {
           </motion.div>
         </div>
       </section>
+  )
+}
 export default AIToolsPage;
