@@ -70,7 +70,7 @@ const HomePage = () => {
       </Helmet>
 
       {/* Hero Dashboard Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-24">
         <div className="absolute inset-0 hero-gradient opacity-80"></div>
         <div className="absolute inset-0 bg-[url('https://horizons-cdn.hostinger.com/8926b371-f519-44eb-af77-4ae82faf4e9e/a2f49d41c4d3e42d853aa1b6b5fd217f.png')] bg-cover bg-center opacity-10"></div>
         
@@ -79,7 +79,7 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
               <span className="gradient-text">Real Estate</span>
@@ -93,7 +93,7 @@ const HomePage = () => {
           </motion.div>
 
           {/* Quick Actions Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {quickActions.map((action, index) => {
               const Icon = action.icon;
               return (
