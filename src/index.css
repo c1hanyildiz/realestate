@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --background: 0 0% 8%;
+  --foreground: 0 0% 90%;
+  --card: 0 0% 12%;
+  --card-foreground: 0 0% 90%;
+  --popover: 0 0% 8%;
+  --popover-foreground: 0 0% 90%;
+  --primary: 45 85% 55%;
+  --primary-foreground: 0 0% 8%;
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 90%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 0 0% 15%;
+  --accent-foreground: 0 0% 90%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 90%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 45 85% 55%;
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Lexend', sans-serif;
+  min-height: 100vh;
+}
+
+.glass-effect {
+  background: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #e6b325, #D4AF37, #C0A02C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, hsl(var(--background)) 0%, #1a1a1a 50%, #212121 100%);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  border-color: hsl(var(--primary));
+}
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2.5s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 15px hsla(var(--primary), 0.4), 0 0 30px hsla(var(--primary), 0.2); 
+  }
+  50% { 
+    box-shadow: 0 0 30px hsla(var(--primary), 0.6), 0 0 60px hsla(var(--primary), 0.4); 
+  }
+}
