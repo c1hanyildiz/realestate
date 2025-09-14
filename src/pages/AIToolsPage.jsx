@@ -83,12 +83,12 @@ const AIToolsPage = () => {
               <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <i className="text-blue-400 text-2xl">📊</i>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-4">OPEX Benchmarking</h3>
-              <p class="text-gray-300 mb-6">AI-powered operating expense analysis that compares your costs against industry benchmarks.</p>
-              <ul class="text-left space-y-2 text-gray-300 mb-6">
-                <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Real-time benchmark comparisons</li>
-                <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> AI-driven cost optimization</li>
-                <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Detailed savings analysis</li>
+              <h3 className="text-2xl font-bold text-white mb-4">OPEX Benchmarking</h3>
+              <p className="text-gray-300 mb-6">AI-powered operating expense analysis that compares your costs against industry benchmarks.</p>
+              <ul className="text-left space-y-2 text-gray-300 mb-6">
+                <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Real-time benchmark comparisons</li>
+                <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> AI-driven cost optimization</li>
+                <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Detailed savings analysis</li>
               </ul>
             </motion.div>
 
@@ -102,14 +102,53 @@ const AIToolsPage = () => {
               <div className="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <i className="text-green-400 text-2xl">📈</i>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-4">Renovation ROI Calculator</h3>
-              <p class="text-gray-300 mb-6">Make smarter renovation decisions with AI-powered ROI predictions and market analysis.</p>
-              <ul class="text-left space-y-2 text-gray-300 mb-6">
-                <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Market-based ROI predictions</li>
-                <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Project cost optimization</li>
-                <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Risk assessment analysis</li>
+              <h3 className="text-2xl font-bold text-white mb-4">Renovation ROI Calculator</h3>
+              <p className="text-gray-300 mb-6">Make smarter renovation decisions with AI-powered ROI predictions and market analysis.</p>
+              <ul className="text-left space-y-2 text-gray-300 mb-6">
+                <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Market-based ROI predictions</li>
+                <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Project cost optimization</li>
+                <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Risk assessment analysis</li>
               </ul>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="glass-effect rounded-2xl p-8 text-center card-hover"
+            >
+              <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <i className="text-purple-400 text-2xl">🎯</i>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Market Trend Analyzer</h3>
+              <p className="text-gray-300 mb-6">Stay ahead of market trends with AI-powered analysis and predictive insights.</p>
+              <ul className="text-left space-y-2 text-gray-300 mb-6">
+                <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Predictive market analysis</li>
+                <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Location-based insights</li>
+                <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Investment opportunity scoring</li>
+              </ul>
+            </motion.div>
+          </div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Button 
+              onClick={() => window.open('/ai-apps/index.html', '_blank')}
+              size="lg" 
+              className="bg-gold hover:bg-gold-light text-black px-8 py-4 text-lg font-semibold"
+            >
+              <ExternalLink className="mr-2" size={20} />
+              Try All Tools - AI Apps Showcase
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gold to-gold-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -149,43 +188,4 @@ const AIToolsPage = () => {
   );
 };
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="glass-effect rounded-2xl p-8 text-center card-hover"
-            >
-              <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <i className="text-purple-400 text-2xl">🎯</i>
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-4">Market Trend Analyzer</h3>
-              <p class="text-gray-300 mb-6">Stay ahead of market trends with AI-powered analysis and predictive insights.</p>
-              <ul class="text-left space-y-2 text-gray-300 mb-6">
-                <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Predictive market analysis</li>
-                <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Location-based insights</li>
-                <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Investment opportunity scoring</li>
-              </ul>
-            </motion.div>
-          </div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <Button 
-              onClick={() => window.open('/ai-apps/index.html', '_blank')}
-              size="lg" 
-              className="bg-gold hover:bg-gold-light text-black px-8 py-4 text-lg font-semibold"
-            >
-              <ExternalLink className="mr-2" size={20} />
-              Try All Tools - AI Apps Showcase
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-  )
-}
 export default AIToolsPage;
