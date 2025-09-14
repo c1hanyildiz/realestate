@@ -65,6 +65,29 @@ body {
   border-color: hsl(var(--primary));
 }
 
+/* Button hover fixes */
+.btn-gold {
+  background-color: #D4AF37;
+  color: #000000;
+}
+
+.btn-gold:hover {
+  background-color: #e6b325;
+  color: #000000 !important;
+}
+
+.btn-outline-gold {
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  background-color: transparent;
+  color: #D4AF37;
+}
+
+.btn-outline-gold:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  color: #e6b325 !important;
+  border-color: #D4AF37;
+}
+
 .floating-animation {
   animation: float 6s ease-in-out infinite;
 }
