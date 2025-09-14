@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Apps Studio - Premium AI-Powered Applications</title>
+    <meta name="description" content="Discover our collection of premium AI-powered applications designed to transform your business operations with cutting-edge technology.">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/framer-motion@10/dist/framer-motion.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-sf-pro">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-semibold">AI Apps Studio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#apps" class="text-gray-300 hover:text-white transition-colors">Apps</a>
+                    <a href="#features" class="text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="#pricing" class="text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-6">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+                AI Apps Studio
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto font-light">
+                Premium AI-powered applications that transform how businesses operate. 
+                Built with cutting-edge technology for the modern enterprise.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                    Explore Apps
+                </button>
+                <button class="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
+                    Watch Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps Showcase -->
+    <section id="apps" class="py-32 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Our Apps</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Three powerful AI applications designed to revolutionize your business operations
+                </p>
+            </div>
+
+            <!-- OPEX Benchmarking App -->
+            <div class="mb-32">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+                            <div id="opex-app" class="space-y-6">
+                                <!-- OPEX App Interface will be rendered here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium">
+                            <i data-lucide="calculator" class="w-4 h-4"></i>
+                            <span>Financial Analytics</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-bold">OPEX Benchmarking</h3>
+                        <p class="text-xl text-gray-300 leading-relaxed">
+                            AI-powered operating expense analysis that compares your costs against industry benchmarks. 
+                            Get instant insights and optimization recommendations.
+                        </p>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span>Real-time benchmark comparisons</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span>AI-driven cost optimization</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span>Detailed savings analysis</span>
+                            </li>
+                        </ul>
+                        <div class="flex space-x-4 pt-4">
+                            <button class="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition-all">
+                                Try Demo
+                            </button>
+                            <button class="border border-white/30 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-all">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Renovation ROI App -->
+            <div class="mb-32">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium">
+                            <i data-lucide="trending-up" class="w-4 h-4"></i>
+                            <span>Investment Analysis</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-bold">Renovation ROI Calculator</h3>
+                        <p class="text-xl text-gray-300 leading-relaxed">
+                            Make smarter renovation decisions with AI-powered ROI predictions. 
+                            Analyze potential returns before you invest.
+                        </p>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span>Market-based ROI predictions</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span>Project cost optimization</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span>Risk assessment analysis</span>
+                            </li>
+                        </ul>
+                        <div class="flex space-x-4 pt-4">
+                            <button class="bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-all">
+                                Try Demo
+                            </button>
+                            <button class="border border-white/30 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-all">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+                        <div id="roi-app" class="space-y-6">
+                            <!-- ROI App Interface will be rendered here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Trend Analyzer App -->
+            <div class="mb-32">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+                            <div id="market-app" class="space-y-6">
+                                <!-- Market App Interface will be rendered here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium">
+                            <i data-lucide="bar-chart" class="w-4 h-4"></i>
+                            <span>Market Intelligence</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-bold">Market Trend Analyzer</h3>
+                        <p class="text-xl text-gray-300 leading-relaxed">
+                            Stay ahead of market trends with AI-powered analysis. 
+                            Get predictive insights for better investment decisions.
+                        </p>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span>Predictive market analysis</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span>Location-based insights</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <span>Investment opportunity scoring</span>
+                            </li>
+                        </ul>
+                        <div class="flex space-x-4 pt-4">
+                            <button class="bg-purple-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-600 transition-all">
+                                Try Demo
+                            </button>
+                            <button class="border border-white/30 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-all">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-32 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Why Choose Our Apps</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Built with enterprise-grade technology and designed for maximum impact
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center space-y-4 p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto">
+                        <i data-lucide="zap" class="w-8 h-8 text-blue-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Lightning Fast</h3>
+                    <p class="text-gray-400">Get instant results with our optimized AI algorithms</p>
+                </div>
+                
+                <div class="text-center space-y-4 p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Enterprise Security</h3>
+                    <p class="text-gray-400">Bank-level security with end-to-end encryption</p>
+                </div>
+                
+                <div class="text-center space-y-4 p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto">
+                        <i data-lucide="brain" class="w-8 h-8 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">AI-Powered</h3>
+                    <p class="text-gray-400">Advanced machine learning for accurate predictions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-32 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Simple Pricing</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Choose the perfect plan for your business needs
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gradient-to-b from-white/5 to-transparent border border-white/10 rounded-3xl p-8 text-center">
+                    <h3 class="text-2xl font-semibold mb-4">Starter</h3>
+                    <div class="text-4xl font-bold mb-6">$99<span class="text-lg text-gray-400">/month</span></div>
+                    <ul class="space-y-3 text-gray-300 mb-8">
+                        <li>1 AI App Access</li>
+                        <li>Basic Analytics</li>
+                        <li>Email Support</li>
+                        <li>Monthly Reports</li>
+                    </ul>
+                    <button class="w-full bg-white/10 text-white py-3 rounded-full font-semibold hover:bg-white/20 transition-all">
+                        Get Started
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-b from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-3xl p-8 text-center relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Professional</h3>
+                    <div class="text-4xl font-bold mb-6">$299<span class="text-lg text-gray-400">/month</span></div>
+                    <ul class="space-y-3 text-gray-300 mb-8">
+                        <li>All 3 AI Apps</li>
+                        <li>Advanced Analytics</li>
+                        <li>Priority Support</li>
+                        <li>Custom Integrations</li>
+                    </ul>
+                    <button class="w-full bg-blue-500 text-white py-3 rounded-full font-semibold hover:bg-blue-600 transition-all">
+                        Get Started
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-b from-white/5 to-transparent border border-white/10 rounded-3xl p-8 text-center">
+                    <h3 class="text-2xl font-semibold mb-4">Enterprise</h3>
+                    <div class="text-4xl font-bold mb-6">Custom</div>
+                    <ul class="space-y-3 text-gray-300 mb-8">
+                        <li>Unlimited Access</li>
+                        <li>White-label Options</li>
+                        <li>24/7 Support</li>
+                        <li>Custom Development</li>
+                    </ul>
+                    <button class="w-full bg-white text-black py-3 rounded-full font-semibold hover:bg-gray-100 transition-all">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 bg-black">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-xl text-gray-400 mb-12">
+                Join thousands of companies already using our AI-powered applications
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                    Start Free Trial
+                </button>
+                <button class="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
+                    Schedule Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gray-900 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-semibold mb-4">AI Apps Studio</div>
+                    <p class="text-gray-400">Premium AI applications for modern businesses.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">OPEX Benchmarking</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">ROI Calculator</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Market Analyzer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 AI Apps Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
