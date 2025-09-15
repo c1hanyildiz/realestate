@@ -130,52 +130,19 @@
             <div class="grid lg:grid-cols-2 gap-12">
                 <!-- Chatbot Interface -->
                 <div class="bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-                                <i data-lucide="bot" class="w-5 h-5 text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-white">Highline Assistant</h4>
-                                <div class="flex items-center space-x-2">
-                                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                                    <span class="text-xs text-gray-400">Online</span>
-                                </div>
-                            </div>
+                    <div class="text-center space-y-6">
+                        <div class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto">
+                            <i data-lucide="message-circle" class="w-10 h-10 text-white"></i>
                         </div>
-                        
-                        <div id="chat-container" class="h-96 overflow-y-auto space-y-4 p-4 bg-black/20 rounded-xl">
-                            <div class="flex items-start space-x-3">
-                                <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="bot" class="w-4 h-4 text-white"></i>
-                                </div>
-                                <div class="bg-gray-800 rounded-2xl rounded-tl-sm px-4 py-3 max-w-xs">
-                                    <p class="text-sm text-white">Hey there! 👋 Need a deep clean, office walkthrough, pressure wash, or graffiti removal? I'll get you scheduled with our comprehensive intake process.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex space-x-2">
-                            <input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 bg-gray-800 border border-gray-700 rounded-full px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-orange-500">
-                            <button onclick="sendMessage()" class="bg-orange-500 text-white p-3 rounded-full hover:bg-orange-600 transition-colors">
-                                <i data-lucide="send" class="w-5 h-5"></i>
-                            </button>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-2">
-                            <button onclick="selectService('Deep Cleaning')" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
-                                Deep Cleaning
-                            </button>
-                            <button onclick="selectService('Office Walkthrough')" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
-                                Office Walkthrough
-                            </button>
-                            <button onclick="selectService('Pressure Washing')" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
-                                Pressure Washing
-                            </button>
-                            <button onclick="selectService('Graffiti Removal')" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
-                                Graffiti Removal
-                            </button>
-                        </div>
+                        <h4 class="text-2xl font-bold text-white">Interactive Demo Available</h4>
+                        <p class="text-gray-300 max-w-md mx-auto">
+                            Experience our full AI booking assistant with service-specific intake forms, 
+                            real-time validation, and comprehensive data collection.
+                        </p>
+                        <button onclick="window.location.href='chat/index.html'" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105">
+                            <i data-lucide="external-link" class="w-5 h-5 inline mr-2"></i>
+                            Launch Live Demo
+                        </button>
                     </div>
                 </div>
                 
