@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovation ROI Calculator - AI Apps Studio</title>
+    <meta name="description" content="Make smarter renovation decisions with AI-powered ROI predictions and market analysis. Calculate potential returns before you invest.">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-sf-pro">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-semibold">
+                    <a href="index.html">AI Apps Studio</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <div class="relative group">
+                        <button class="text-white hover:text-green-400 transition-colors flex items-center">
+                            Apps <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-white/10 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="opex-benchmarking.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-t-xl">
+                                <div class="font-medium">OPEX Benchmarking</div>
+                                <div class="text-xs text-gray-400">Operating expense analysis</div>
+                            </a>
+                            <a href="renovation-roi.html" class="block px-4 py-3 text-green-400 hover:bg-white/5">
+                                <div class="font-medium">Renovation ROI</div>
+                                <div class="text-xs text-gray-400">Investment return calculator</div>
+                            </a>
+                            <a href="market-analyzer.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-b-xl">
+                                <div class="font-medium">Market Analyzer</div>
+                                <div class="text-xs text-gray-400">Trend analysis tool</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="index.html#features" class="text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="index.html#pricing" class="text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-900/20 via-black to-blue-900/20"></div>
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-6">
+            <div class="inline-flex items-center space-x-2 bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                <i data-lucide="trending-up" class="w-4 h-4"></i>
+                <span>Investment Analysis</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-green-400 via-green-300 to-green-500 bg-clip-text text-transparent">
+                Renovation ROI
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto font-light">
+                Make smarter renovation decisions with AI-powered ROI predictions. 
+                Analyze potential returns before you invest.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <button onclick="scrollToDemo()" class="bg-green-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 transition-all transform hover:scale-105">
+                    Try Calculator
+                </button>
+                <button class="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
+                    View Case Studies
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-32 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Smart Investment Analysis</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Advanced features to maximize your renovation returns
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center space-y-4 p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto">
+                        <i data-lucide="target" class="w-8 h-8 text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Market-Based Predictions</h3>
+                    <p class="text-gray-400">ROI calculations based on real market data and comparable sales</p>
+                </div>
+                
+                <div class="text-center space-y-4 p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto">
+                        <i data-lucide="dollar-sign" class="w-8 h-8 text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Cost Optimization</h3>
+                    <p class="text-gray-400">AI-powered suggestions to maximize returns while minimizing costs</p>
+                </div>
+                
+                <div class="text-center space-y-4 p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Risk Assessment</h3>
+                    <p class="text-gray-400">Comprehensive risk analysis to protect your investment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-32 bg-black">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Calculate Your ROI</h2>
+                <p class="text-xl text-gray-400">
+                    Get instant ROI predictions for your renovation project
+                </p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+                <div id="roi-app" class="space-y-6">
+                    <!-- ROI App Interface will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 bg-gradient-to-r from-green-600 to-blue-600">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 text-white">Maximize Your Investment Returns</h2>
+            <p class="text-xl text-green-100 mb-12">
+                Make data-driven renovation decisions with confidence
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                    Start Free Trial
+                </button>
+                <button class="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
+                    Schedule Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gray-900 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-semibold mb-4">
+                        <a href="index.html">AI Apps Studio</a>
+                    </div>
+                    <p class="text-gray-400">Premium AI applications for modern businesses.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="opex-benchmarking.html" class="hover:text-white transition-colors">OPEX Benchmarking</a></li>
+                        <li><a href="renovation-roi.html" class="hover:text-white transition-colors">ROI Calculator</a></li>
+                        <li><a href="market-analyzer.html" class="hover:text-white transition-colors">Market Analyzer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 AI Apps Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function scrollToDemo() {
+            document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

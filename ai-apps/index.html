@@ -18,7 +18,25 @@
             <div class="flex justify-between items-center">
                 <div class="text-2xl font-semibold">AI Apps Studio</div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#apps" class="text-gray-300 hover:text-white transition-colors">Apps</a>
+                    <div class="relative group">
+                        <button class="text-gray-300 hover:text-white transition-colors flex items-center">
+                            Apps <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-white/10 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="opex-benchmarking.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-t-xl">
+                                <div class="font-medium">OPEX Benchmarking</div>
+                                <div class="text-xs text-gray-400">Operating expense analysis</div>
+                            </a>
+                            <a href="renovation-roi.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5">
+                                <div class="font-medium">Renovation ROI</div>
+                                <div class="text-xs text-gray-400">Investment return calculator</div>
+                            </a>
+                            <a href="market-analyzer.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-b-xl">
+                                <div class="font-medium">Market Analyzer</div>
+                                <div class="text-xs text-gray-400">Trend analysis tool</div>
+                            </a>
+                        </div>
+                    </div>
                     <a href="#features" class="text-gray-300 hover:text-white transition-colors">Features</a>
                     <a href="#pricing" class="text-gray-300 hover:text-white transition-colors">Pricing</a>
                     <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
@@ -97,8 +115,8 @@
                             </li>
                         </ul>
                         <div class="flex space-x-4 pt-4">
-                            <button class="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition-all">
-                                Try Demo
+                            <button onclick="window.location.href='opex-benchmarking.html'" class="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition-all">
+                                View App
                             </button>
                             <button class="border border-white/30 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-all">
                                 Learn More
@@ -136,8 +154,8 @@
                             </li>
                         </ul>
                         <div class="flex space-x-4 pt-4">
-                            <button class="bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-all">
-                                Try Demo
+                            <button onclick="window.location.href='renovation-roi.html'" class="bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-all">
+                                View App
                             </button>
                             <button class="border border-white/30 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-all">
                                 Learn More
@@ -187,8 +205,8 @@
                             </li>
                         </ul>
                         <div class="flex space-x-4 pt-4">
-                            <button class="bg-purple-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-600 transition-all">
-                                Try Demo
+                            <button onclick="window.location.href='market-analyzer.html'" class="bg-purple-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-600 transition-all">
+                                View App
                             </button>
                             <button class="border border-white/30 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-all">
                                 Learn More
@@ -326,9 +344,9 @@
                 <div>
                     <h4 class="font-semibold mb-4">Products</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">OPEX Benchmarking</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">ROI Calculator</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Market Analyzer</a></li>
+                        <li><a href="opex-benchmarking.html" class="hover:text-white transition-colors">OPEX Benchmarking</a></li>
+                        <li><a href="renovation-roi.html" class="hover:text-white transition-colors">ROI Calculator</a></li>
+                        <li><a href="market-analyzer.html" class="hover:text-white transition-colors">Market Analyzer</a></li>
                     </ul>
                 </div>
                 <div>
