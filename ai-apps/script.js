@@ -36,7 +36,64 @@ let serviceSpecificStep = 0;
 let currentService = '';
 
 function sendMessage() {
-    // Implementation for sending messages
+    const input = document.getElementById('chat-input');
+    if (!input) return;
+    
+    const message = input.value.trim();
+    if (!message) return;
+    
+    addUserMessage(message);
+    input.value = '';
+    
+    setTimeout(() => {
+        processChatMessage(message);
+    }, 1000);
+}
+
+function addUserMessage(message) {
+    const container = document.getElementById('chat-container');
+    if (!container) return;
+    
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'flex items-start space-x-3 justify-end';
+    messageDiv.innerHTML = `
+        <div class="bg-orange-500 rounded-2xl rounded-tr-sm px-4 py-3 max-w-xs">
+            <p class="text-sm text-white">${message}</p>
+        </div>
+        <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <i data-lucide="user" class="w-4 h-4 text-white"></i>
+        </div>
+    `;
+    container.appendChild(messageDiv);
+    container.scrollTop = container.scrollHeight;
+    
+    // Re-initialize icons for new content
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+}
+
+function addBotMessage(message) {
+    const container = document.getElementById('chat-container');
+    if (!container) return;
+    
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'flex items-start space-x-3';
+    messageDiv.innerHTML = `
+        <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <i data-lucide="bot" class="w-4 h-4 text-white"></i>
+        </div>
+        <div class="bg-gray-800 rounded-2xl rounded-tl-sm px-4 py-3 max-w-xs">
+            <p class="text-sm text-white">${message}</p>
+        </div>
+    `;
+    container.appendChild(messageDiv);
+    container.scrollTop = container.scrollHeight;
+    
+    // Re-initialize icons for new content
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 }
 
 function selectService(service) {
