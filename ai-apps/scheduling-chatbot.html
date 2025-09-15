@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling Chatbot - AI Apps Studio</title>
+    <meta name="description" content="AI-powered scheduling chatbot for service businesses. Automate bookings, manage calendars, and streamline customer communications.">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-sf-pro">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-semibold">
+                    <a href="index.html">AI Apps Studio</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <div class="relative group">
+                        <button class="text-white hover:text-orange-400 transition-colors flex items-center">
+                            Apps <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-white/10 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="opex-benchmarking.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-t-xl">
+                                <div class="font-medium">OPEX Benchmarking</div>
+                                <div class="text-xs text-gray-400">Operating expense analysis</div>
+                            </a>
+                            <a href="renovation-roi.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5">
+                                <div class="font-medium">Renovation ROI</div>
+                                <div class="text-xs text-gray-400">Investment return calculator</div>
+                            </a>
+                            <a href="market-analyzer.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5">
+                                <div class="font-medium">Market Analyzer</div>
+                                <div class="text-xs text-gray-400">Trend analysis tool</div>
+                            </a>
+                            <a href="scheduling-chatbot.html" class="block px-4 py-3 text-orange-400 hover:bg-white/5 rounded-b-xl">
+                                <div class="font-medium">Scheduling Chatbot</div>
+                                <div class="text-xs text-gray-400">AI booking assistant</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="index.html#features" class="text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="index.html#pricing" class="text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-black to-red-900/20"></div>
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-6">
+            <div class="inline-flex items-center space-x-2 bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                <i data-lucide="bot" class="w-4 h-4"></i>
+                <span>AI Assistant</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-orange-300 to-red-400 bg-clip-text text-transparent">
+                Scheduling Chatbot
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto font-light">
+                AI-powered scheduling assistant that automates bookings, manages calendars, 
+                and streamlines customer communications 24/7.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <button onclick="scrollToDemo()" class="bg-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-600 transition-all transform hover:scale-105">
+                    Try Chatbot
+                </button>
+                <button class="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
+                    View Admin Panel
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-32 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Smart Scheduling Features</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Everything you need to automate your booking process
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center space-y-4 p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center mx-auto">
+                        <i data-lucide="calendar-check" class="w-8 h-8 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Live Calendar Integration</h3>
+                    <p class="text-gray-400">Real-time availability with automatic conflict prevention and buffer management</p>
+                </div>
+                
+                <div class="text-center space-y-4 p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center mx-auto">
+                        <i data-lucide="message-circle" class="w-8 h-8 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Intelligent Conversations</h3>
+                    <p class="text-gray-400">Natural language processing for seamless customer interactions</p>
+                </div>
+                
+                <div class="text-center space-y-4 p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-16 h-16 bg-orange-500/20 rounded-2xl flex items-center justify-center mx-auto">
+                        <i data-lucide="settings" class="w-8 h-8 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Admin Control Panel</h3>
+                    <p class="text-gray-400">Complete booking management with approval workflows and notifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-32 bg-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Experience the Chatbot</h2>
+                <p class="text-xl text-gray-400">
+                    See how easy it is to book services with our AI assistant
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Chatbot Interface -->
+                <div class="bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+                    <div id="chatbot-demo" class="space-y-6">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+                                <i data-lucide="bot" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Highline Assistant</h4>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                    <span class="text-xs text-gray-400">Online</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chat-container h-96 overflow-y-auto space-y-4 p-4 bg-black/20 rounded-xl">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="bot" class="w-4 h-4 text-white"></i>
+                                </div>
+                                <div class="bg-gray-800 rounded-2xl rounded-tl-sm px-4 py-3 max-w-xs">
+                                    <p class="text-sm text-white">Hey there! 👋 Need a deep clean, office walkthrough, pressure wash, or graffiti removal? I'll get you scheduled in under a minute.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-2">
+                            <input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 bg-gray-800 border border-gray-700 rounded-full px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-orange-500">
+                            <button onclick="sendMessage()" class="bg-orange-500 text-white p-3 rounded-full hover:bg-orange-600 transition-colors">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="selectService('Deep Cleaning')" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                                Deep Cleaning
+                            </button>
+                            <button onclick="selectService('Office Walkthrough')" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                                Office Walkthrough
+                            </button>
+                            <button onclick="selectService('Pressure Washing')" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                                Pressure Washing
+                            </button>
+                            <button onclick="selectService('Graffiti Removal')" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                                Graffiti Removal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Admin Panel Preview -->
+                <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+                    <h4 class="text-2xl font-semibold mb-6 text-center">Admin Dashboard</h4>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-black/30 rounded-xl p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <h5 class="font-semibold text-white">Recent Bookings</h5>
+                                <span class="bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full text-xs">3 Pending</span>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <div class="bg-gray-800/50 rounded-lg p-3">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <p class="text-sm font-medium text-white">ABC Corp - Deep Cleaning</p>
+                                            <p class="text-xs text-gray-400">Tomorrow 2:00 PM</p>
+                                        </div>
+                                        <div class="flex space-x-2">
+                                            <button class="bg-green-500 text-white px-3 py-1 rounded text-xs hover:bg-green-600">
+                                                Approve
+                                            </button>
+                                            <button class="bg-red-500 text-white px-3 py-1 rounded text-xs hover:bg-red-600">
+                                                Deny
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-gray-800/50 rounded-lg p-3">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <p class="text-sm font-medium text-white">XYZ Office - Walkthrough</p>
+                                            <p class="text-xs text-gray-400">Friday 10:00 AM</p>
+                                        </div>
+                                        <div class="flex space-x-2">
+                                            <button class="bg-green-500 text-white px-3 py-1 rounded text-xs hover:bg-green-600">
+                                                Approve
+                                            </button>
+                                            <button class="bg-red-500 text-white px-3 py-1 rounded text-xs hover:bg-red-600">
+                                                Deny
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-black/30 rounded-xl p-4">
+                            <h5 class="font-semibold text-white mb-3">Calendar Management</h5>
+                            <div class="grid grid-cols-7 gap-1 text-xs">
+                                <div class="text-center text-gray-400 p-2">Mon</div>
+                                <div class="text-center text-gray-400 p-2">Tue</div>
+                                <div class="text-center text-gray-400 p-2">Wed</div>
+                                <div class="text-center text-gray-400 p-2">Thu</div>
+                                <div class="text-center text-gray-400 p-2">Fri</div>
+                                <div class="text-center text-gray-400 p-2">Sat</div>
+                                <div class="text-center text-gray-400 p-2">Sun</div>
+                                
+                                <div class="text-center p-2 bg-gray-700 rounded">1</div>
+                                <div class="text-center p-2 bg-orange-500 rounded text-white">2</div>
+                                <div class="text-center p-2 bg-gray-700 rounded">3</div>
+                                <div class="text-center p-2 bg-green-500 rounded text-white">4</div>
+                                <div class="text-center p-2 bg-gray-700 rounded">5</div>
+                                <div class="text-center p-2 bg-gray-700 rounded">6</div>
+                                <div class="text-center p-2 bg-gray-700 rounded">7</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="py-32 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Perfect For Service Businesses</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Streamline operations across multiple industries
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center space-y-4 p-6 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto">
+                        <i data-lucide="building" class="w-6 h-6 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Cleaning Services</h3>
+                    <p class="text-gray-400 text-sm">Deep cleaning, office maintenance, specialized cleaning</p>
+                </div>
+                
+                <div class="text-center space-y-4 p-6 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto">
+                        <i data-lucide="wrench" class="w-6 h-6 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Maintenance</h3>
+                    <p class="text-gray-400 text-sm">HVAC, plumbing, electrical, general repairs</p>
+                </div>
+                
+                <div class="text-center space-y-4 p-6 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto">
+                        <i data-lucide="scissors" class="w-6 h-6 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Personal Services</h3>
+                    <p class="text-gray-400 text-sm">Salons, spas, fitness, consultations</p>
+                </div>
+                
+                <div class="text-center space-y-4 p-6 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto">
+                        <i data-lucide="truck" class="w-6 h-6 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Field Services</h3>
+                    <p class="text-gray-400 text-sm">Landscaping, pest control, delivery services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 bg-gradient-to-r from-orange-600 to-red-600">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 text-white">Automate Your Bookings Today</h2>
+            <p class="text-xl text-orange-100 mb-12">
+                Stop losing customers to manual booking processes. Let AI handle scheduling 24/7.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                    Start Free Trial
+                </button>
+                <button class="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
+                    Schedule Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gray-900 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-semibold mb-4">
+                        <a href="index.html">AI Apps Studio</a>
+                    </div>
+                    <p class="text-gray-400">Premium AI applications for modern businesses.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="opex-benchmarking.html" class="hover:text-white transition-colors">OPEX Benchmarking</a></li>
+                        <li><a href="renovation-roi.html" class="hover:text-white transition-colors">ROI Calculator</a></li>
+                        <li><a href="market-analyzer.html" class="hover:text-white transition-colors">Market Analyzer</a></li>
+                        <li><a href="scheduling-chatbot.html" class="hover:text-white transition-colors">Scheduling Chatbot</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 AI Apps Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function scrollToDemo() {
+            document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Chatbot functionality
+        let chatStep = 0;
+        let bookingData = {};
+
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            if (!message) return;
+
+            addUserMessage(message);
+            input.value = '';
+            
+            setTimeout(() => {
+                processChatMessage(message);
+            }, 1000);
+        }
+
+        function selectService(service) {
+            addUserMessage(service);
+            bookingData.service = service;
+            
+            setTimeout(() => {
+                addBotMessage(`Great choice! ${service} it is. What's your company name?`);
+                chatStep = 1;
+            }, 1000);
+        }
+
+        function addUserMessage(message) {
+            const chatContainer = document.querySelector('.chat-container');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'flex items-start space-x-3 justify-end';
+            messageDiv.innerHTML = `
+                <div class="bg-orange-500 rounded-2xl rounded-tr-sm px-4 py-3 max-w-xs">
+                    <p class="text-sm text-white">${message}</p>
+                </div>
+                <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="user" class="w-4 h-4 text-white"></i>
+                </div>
+            `;
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            lucide.createIcons();
+        }
+
+        function addBotMessage(message) {
+            const chatContainer = document.querySelector('.chat-container');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'flex items-start space-x-3';
+            messageDiv.innerHTML = `
+                <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="bot" class="w-4 h-4 text-white"></i>
+                </div>
+                <div class="bg-gray-800 rounded-2xl rounded-tl-sm px-4 py-3 max-w-xs">
+                    <p class="text-sm text-white">${message}</p>
+                </div>
+            `;
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            lucide.createIcons();
+        }
+
+        function processChatMessage(message) {
+            switch(chatStep) {
+                case 1:
+                    bookingData.company = message;
+                    addBotMessage(`Perfect, ${message}! Now I need your contact name.`);
+                    chatStep = 2;
+                    break;
+                case 2:
+                    bookingData.contact = message;
+                    addBotMessage(`Nice to meet you, ${message}! What's your work email address?`);
+                    chatStep = 3;
+                    break;
+                case 3:
+                    bookingData.email = message;
+                    addBotMessage(`Got it! And your phone number?`);
+                    chatStep = 4;
+                    break;
+                case 4:
+                    bookingData.phone = message;
+                    addBotMessage(`Thanks! Now, what's the service location address?`);
+                    chatStep = 5;
+                    break;
+                case 5:
+                    bookingData.address = message;
+                    addBotMessage(`Perfect! When would you like to schedule this? I have availability tomorrow at 2:00 PM, Friday at 10:00 AM, or Monday at 9:00 AM.`);
+                    chatStep = 6;
+                    break;
+                case 6:
+                    bookingData.datetime = message;
+                    addBotMessage(`Excellent! Any special access instructions or notes I should know about?`);
+                    chatStep = 7;
+                    break;
+                case 7:
+                    bookingData.notes = message;
+                    addBotMessage(`All set! 🎉 Your ${bookingData.service} request for ${bookingData.company} is pending review. You'll receive an email confirmation shortly, and we'll get back to you within 2 hours with approval and next steps. Thanks for choosing Highline Building Services!`);
+                    chatStep = 0;
+                    break;
+                default:
+                    addBotMessage("I'd be happy to help you schedule a service! Please select one of the service options above to get started.");
+            }
+        }
+
+        // Allow Enter key to send messages
+        document.getElementById('chat-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
